@@ -1,0 +1,464 @@
+/*import font*/
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+/*reset browser*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Merriweather";
+}
+
+header{
+    position: relative;
+    height: 100vh; /* Full height of the viewport */
+    overflow: hidden; /* Hide any overflow */
+}
+
+/*logo to place on top of Michigan*/
+.logo{
+    position: absolute;
+    top: 10px;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo img{
+    max-width: 100px;
+    margin-top: 50px;
+    opacity: 0.8;
+    border-radius: 30%;
+}
+
+.hero-section{
+    background-image: url(../assets/img/hero-img.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    /*used to center the headings and to force them to be in column positioning*/
+    display: flex;
+    flex-direction: column;
+    /**/
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    text-align: center;
+    z-index: 1;
+}
+
+.hero-section h1{
+    color: #ffffff;
+    font-size: 10rem;
+    margin-bottom: 100px;
+    
+}
+
+.hero-section h2{
+    color: #ffffff;
+    font-size: 2rem;
+}
+
+.arrow-down-1{
+    margin-top: 20px;
+    height: auto;
+    color: #ffffff;
+}
+
+.arrow-down-1 i{
+    /*enlarges the icon*/
+    font-size: 5rem;
+    margin-top: 20px;
+}
+
+.question-section{
+    background-image: url(../assets/img/question-img.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    height: 100vh;
+}
+
+.question-section h1{
+    font-size: 4rem;
+    flex: 1;
+    margin-left: 50px;
+    margin-right: 20px;
+    color: #ffffff;
+}
+
+.answers {
+    flex: 1;
+    font-size: 30px;
+    color: #ffffff;
+    
+}
+
+.answers p{
+    margin: 50px 0; /* Add horizontal spacing between paragraphs */
+    color: #ffffff;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.40);
+}
+
+button {
+    position: absolute;
+    flex: 1;
+    padding: 10px;
+    font-size: 1rem;
+    margin-top: 500px;
+    margin-left: 36px;
+    left: 50%;
+    background-color: #e2c852; /* Button background color */
+    color: #ffffff; /* Button text color */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Change cursor on hover */
+}
+
+/*section 3 with the gallery evenly spaced*/
+.gallery{
+    background-image: url(../assets/img/lake-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    padding: 100px;
+    height: 100vh;
+}
+
+/*subject to change*/
+.gallery h1{
+    color: #ffffff;
+    background-color: rgba(252, 227, 196, 0.2);
+    /*test line for font manipulation
+    https://developer.mozilla.org/en-US/docs/Web/CSS/text-shadow*/
+    border-style: ridge;
+    border-color: #000000;
+    padding: 10px;
+    text-shadow: rgb(80, 79, 77) 1px 0 10px;
+    top: 5px;
+    text-align: center;
+    font-size: 4rem;
+    justify-content: center;
+    /*adding positioning and overflow for button*/
+    position: absolute;
+    overflow: hidden;
+
+}
+
+.three-imgs {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.img-container {
+    position: relative; /* For absolute positioning of caption */
+    width: 30%;
+    margin: 20px;
+}
+
+.img-container img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10%;
+}
+
+/* Style for individual captions and arrows */
+.caption-arrow {
+    position: absolute;
+    bottom: 20px; /* Position at the bottom of each image */
+    left: 50%;
+    transform: translateX(-50%); /* Center the caption horizontally */
+    text-align: center;
+    color: #ffffff;
+    background-color: rgba(10, 10, 10, 0.5);
+}
+
+.caption-arrow p {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/*NTS: try to see if bg color for arrow can be changed*/
+.arrow-downs i {
+    font-size: 5rem;
+    /*maybe add animation??*/
+}
+
+/*hover for the arrows underneath the captions*/
+.arrows-down:hover{
+    transform: scale(2.0);
+    transition: transform 0.3s ease;
+}
+/*
+.three-imgs img{
+    flex-direction: row;
+    justify-content: space-between;
+    width: 30%;
+    height: 500px;
+    object-fit: cover;
+    margin: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10%;
+}
+*/
+
+/*might change button styling*/
+.read-more2{
+    position: absolute; 
+    bottom: 40px; 
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Correct centering */
+    padding: 10px 20px; /* Button padding */
+    background-color: #e2c852; 
+    color: #ffffff; 
+    border-radius: 5px; 
+    cursor: pointer; /* Pointer on hover */
+    font-size: 1.2rem; 
+    border: none; /* Remove border */
+}
+
+/*section 4*/
+.to-do{
+    background-image: url(../assets/img/forest-overhead.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    padding: 100px;
+    box-sizing: border-box;
+    height: 100vh;
+}
+
+.to-do h1{
+    font-size: 4rem;
+    margin-left: 50px;
+    margin-right: 80px;
+    justify-content: center;
+    padding: 30px;
+    color: #ffffff;
+}
+
+.answers2{
+    font-size: 20px;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #f0f8ff;
+    
+}
+
+/*section 5*/
+.stats{
+    background-image: url(../assets/img/petosky.jpg);
+    background-position: center;
+    background-size: cover;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    height: 100vh;
+    padding: 100px;
+}
+
+.stats img{
+    height: 300px;
+    width: 300px;
+    /*attempt to make spaces in between the bubbles*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.stat-item h1{
+    font-weight: 800;
+    position: relative;
+    font-size: 3rem;
+    z-index: 2;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    top: 180px;
+}
+
+.stat-item p{
+    position: relative;
+    font-size: 20px;
+    z-index: 2;
+    color: #ffffff;
+    text-align: center;
+    margin: 0;
+    top: 205px;
+}
+
+/*section 6*/
+.author-section{
+    background-image: url(../assets/img/lake-michigan.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /**padding: 100px;**/
+    height: 80vh;
+}
+
+.author img{
+    height: 300px;
+    width: 200px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    filter: grayscale(50%);
+    /*might get rid of*/
+    border-style:ridge;
+}
+
+.bio{
+    align-items: center;
+    justify-content: center;
+    max-width: 500px;
+    text-align: center;
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.5);
+    line-height: 1.5;
+}
+
+.bio i{
+    margin-top: 10px;
+    width: 20px;
+    height: 20px;
+}
+
+.gallery2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Style for the left and right arrows */
+.left-arrow, .right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 10; /* Ensure the arrows are on top of the images */
+}
+
+/* Positioning for left and right arrows */
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/*contact section*/
+.contact-us{
+    background-image: url(../assets/img/question-img.jpg);
+    background-position: center;
+    background-size: cover;
+    flex-direction: row;
+    display: flex;
+    /**align-items: center;**/
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    padding: 100px;
+    /*height: 60vh*/
+    height: 100%;
+    box-sizing: border-box;
+    gap: 20px;
+}
+
+.contact-info{
+    /*meant for the the positioning error of the SM imgs*/
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 45%;
+    color: #ffffff;
+}
+
+.contact-info h1 {
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+/*moved social media here instead of at the bottom after the contact form*/
+.social-media{
+    margin-top: 20px;
+    /*removed display: flex*/
+    gap: 10px;
+}
+
+.social-media img{
+    width: 30px;
+    height: 30px;
+    background-color: #d3ae42;
+}
+
+.contact-info p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* Right column: Contact Form */
+.contact-form {
+    flex: 1;
+    width: 45%; /* Takes 45% of the container width */
+    display: flex;
+    flex-direction: column;
+    color: #ffffff;
+}
+
+.contact-form label {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form input[type="submit"] {
+    width: auto;
+    background-color: #e2c852;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.contact-form input[type="submit"]:hover {
+    background-color: #d3ae42;
+}
