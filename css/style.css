@@ -1,7 +1,7 @@
-/* Import Font */
+
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
-/* Reset and Defaults */
+
 * {
     margin: 0;
     padding: 0;
@@ -9,7 +9,7 @@
     font-family: 'Merriweather', serif;
 }
 
-/* Hero Section */
+
 .hero-section {
     background-image: url(../assets/MinnenapolisSkyline.jpg);
     background-size: cover;
@@ -64,7 +64,7 @@
     }
 }
 
-/* Second Section */
+
 .second-section {
     background-image: url(../assets/MinnesotaWilderness.jpg);
     background-size: cover;
@@ -107,7 +107,7 @@
     background-color: #d3ae42;
 }
 
-/* Third Section: Best Locations */
+
 .bestlocations {
     text-align: center;
     padding: 50px;
@@ -170,7 +170,7 @@
     background-color: #d3ae42;
 }
 
-/* Fourth Section */
+
 .fourth-section {
     background-image: url(../assets/NorthShore.jpg);
     background-size: cover;
@@ -196,7 +196,7 @@
     border-radius: 10px;
 }
 
-/* Fifth Section: Stats */
+
 .fifth-section {
     background-image: url(../assets/MinnesotaLandscape.jpg);
     background-size: cover;
@@ -236,7 +236,7 @@
     margin: 0;
 }
 
-/* Sixth Section: Image Slider */
+
 .image-slider {
     display: flex;
     overflow: hidden;
@@ -257,7 +257,7 @@
     flex-shrink: 0;
 }
 
-/* Seventh Section */
+
 .seventh-section {
     text-align: center;
     padding: 50px;
@@ -274,52 +274,115 @@
     margin-bottom: 20px;
 }
 
-/* Footer */
-footer {
-    background-image: url(../assets/footerbg.jpg);
-    background-size: cover;
-    padding: 30px;
-    text-align: center;
-    color: #ffffff;
+
+.contact-us-section {
+    background: url(../assets/footerbg.jpg) no-repeat center center/cover;
+    padding: 50px 20px;
+    color: #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.contact-info, .contact-form {
+
+.contact-info {
     flex: 1;
-    margin: 10px;
+    min-width: 300px;
+    margin-right: 20px;
 }
 
-.contact-info h3, .contact-form h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+.contact-info h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #e2c852;
 }
 
 .contact-info p {
     font-size: 1rem;
+    margin-bottom: 10px;
 }
 
-.contact-form input, .contact-form textarea {
+.contact-info a {
+    color: #e2c852;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    color: #d3ae42;
+    text-decoration: underline;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #e2c852;
+    font-size: 2rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #d3ae42;
+}
+
+
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.contact-form h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #e2c852;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+.contact-form input,
+.contact-form textarea {
     width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
-    border: none;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form textarea {
+    resize: none;
+    height: 100px;
 }
 
 .contact-form button {
-    padding: 10px 20px;
-    background-color: #e2c852;
-    color: #ffffff;
+    background: #e2c852;
+    color: #fff;
     border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
     border-radius: 5px;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .contact-form button:hover {
-    background-color: #d3ae42;
+    background: #d3ae42;
 }
